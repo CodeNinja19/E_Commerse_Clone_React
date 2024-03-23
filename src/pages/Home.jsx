@@ -4,9 +4,9 @@ import leafPng from "../assets/logo-leaf.png";
 import React from 'react'
 import ProductList from "../components/ProductList.jsx"
 
-import Lemon from "../assets/lemon-item.jpg"
+import Lemon from "../assets/lemon-item.png"
 import Lettuce from "../assets/lettuce-item.png"
-import Legume from "../assets/legume-item.jpg"
+import Legume from "../assets/legume-item.png"
 import MilaKunis from "../assets/review-profilePick-1.png"
 import ShopNowList from '../components/ShopNowList.jsx';
 import CustomerReview from '../components/CustomerReview.jsx'

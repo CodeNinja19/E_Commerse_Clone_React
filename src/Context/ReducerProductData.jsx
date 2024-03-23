@@ -9,7 +9,7 @@ export default function ReducerProductData(props){
     const [data,setData]=useContext(ProductData);
     const [action,setAction]=useContext(SearchType);
 
-    function reducer(state,a){
+    const reducer=function (state,a){
 
         let newData=[...data];
         switch(action.type){
