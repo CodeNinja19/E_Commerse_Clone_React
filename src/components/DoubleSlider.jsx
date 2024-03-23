@@ -14,7 +14,7 @@ export default function DoubleSlider({minm,maxm,giveValue}){
     const [action,setAction]=useContext(SearchType);
     useEffect(()=>{
 
-        if ((value1[0]===0) && (value1[1]===100)) { 
+        if ((value1[0]===0) && (value1[1]===100)) {
             setAction(i=> ({...i,low:null,high:null}))
             setProdData()
         } else { 
