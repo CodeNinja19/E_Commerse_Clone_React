@@ -115,9 +115,9 @@ export default function Home() {
                     <div className="w-full h-full z-10 rounded-lg bg-black opacity-40 hover:opacity-75 duration-500 absolute"></div>
                     <p className="text-4xl text-center text-white font-bold z-20">Deal Of The Day 15% Off On All Vegetables!</p>
                     <p className="text-xl font-semibold text-center text-white z-20">I am text block. Click edit button to change this tex em ips.</p>
-                    <button className="z-20 text-white bg-[#6a9739] px-10 h-14 rounded-lg text-lg font-semibold mb-2 ml-2 hover:opacity-95">
+                    <NavLink to="/Everything" onClick={()=>(window.scrollTo(0,0))} className={"z-20"}><button className="z-20 text-white bg-[#6a9739] px-10 h-14 rounded-lg text-lg font-semibold mb-2 ml-2 hover:opacity-95">
                         Shop Now &#8594;
-                    </button>
+                    </button></NavLink>
                 </div>
                 <div id="customerReview2" className="lg:w-96"><CustomerReview review={review2}/></div>
             </div>

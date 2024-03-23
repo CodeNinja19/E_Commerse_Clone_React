@@ -9,7 +9,7 @@ export default function AskedQuestion(){
 
 
     return (
-        <div className="w-full flex flex-col items-center">
+        <div className="w-full flex flex-col items-center" onClick={()=>setActive(!active)}>
         <div className="w-full border-t border-b z-10 bg-white border-slate-200 flex items-center justify-between px-2 h-16">
             <h1>Lorem ipsum dolor sit amet, consectetur</h1>
             <h1 onClick={()=>(setActive(!active))}>{active?<KeyboardArrowUpIcon/>:<KeyboardArrowDownIcon/>}</h1>

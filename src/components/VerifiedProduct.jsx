@@ -2,6 +2,7 @@ import ShopButton from "./ShopButton";
 import VerifiedLogo from "../assets/verified-products.png"
 import leafPng from "../assets/logo-leaf.png";
 import CheckCircleOutlineTwoToneIcon from '@mui/icons-material/CheckCircleOutlineTwoTone';
+import {NavLink} from "react-router-dom"
 export default function VerifiedProduct() {
 
     const checked1 = ["Fresh Fruits", "Dry Fruits", "Fresh Vegetables", "Dried Vegetables"];
@@ -39,7 +40,7 @@ export default function VerifiedProduct() {
                     )}
                 </div>
             </div>
-            <div className="flex justify-center my-4 ml-4 w-full md:justify-start"><ShopButton text="Start Shopping"/></div>
+            <div className="flex justify-center my-4 ml-4 w-full md:justify-start"><NavLink to="/Everything" onClick={()=>(window.scrollTo(0,0))}><ShopButton text="Start Shopping"/></NavLink></div>
 
 
         </div>
