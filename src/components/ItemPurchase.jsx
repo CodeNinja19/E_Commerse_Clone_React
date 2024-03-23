@@ -24,12 +24,21 @@ export default function ItemPurchase() {
     },[data])
 
     const changeQuantity=function(){
+        if (prodQuantity==="") {setProdQuantity(0);}
+        else{
+            setPurchase({...purchase,quantity:prodQuantity})
+            setData(data.map((e)=>{
+                if (e.id===purchase.id){ return  {...e,quantity:prodQuantity}}
+                else {return e}
+            }))
+        }
+    }
+    const typing =function (e){
+        const newValue=e.target.value;
+        if (parseInt(newValue)!=NaN && newValue>=0 && newValue<=100) {
+            setProdQuantity(newValue);
+        }
 
-        setPurchase({...purchase,quantity:prodQuantity})
-        setData(data.map((e)=>{
-            if (e.id===purchase.id){ return  {...e,quantity:prodQuantity}}
-            else {return e}
-        }))
     }
 
     return (
@@ -44,7 +53,7 @@ export default function ItemPurchase() {
                     ame.</p>
                 <div className="flex">
                     <div className="flex h-fit border-b border-slate-300 w-full pb-3">
-                        <input type="text" value={prodQuantity} className="w-12 text-center"/>
+                        <input type="text" value={prodQuantity} className="w-12 text-center" onChange={typing}/>
                         <div className="flex flex-col items-center bg-white">
                         <h1 className="active:bg-slate-200 duration-500"><ArrowDropUpIcon sx={{fontSize:"1.3rem",m:"0"}} onClick={()=>{setProdQuantity(e=>(e+1))}}/></h1>
                         <h1 className="active:bg-slate-200 duration-500"><ArrowDropDownIcon sx={{fontSize:"1.3rem",m:"0"}} onClick={()=>{setProdQuantity(e=>{if(prodQuantity!=0){return e-1} else {return e}})}}/></h1>
